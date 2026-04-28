@@ -1124,6 +1124,21 @@
     /* Reunion section */
     .reunion { padding: 100px 20px; }
     .reunion-meaning { margin-top: 60px; font-size: 11px; }
+
+    /* Hero scroll indicator — tighter letter-spacing keeps "↓ SCROLL ↓" on one line */
+    .hero-scroll {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      bottom: 40px;
+      white-space: nowrap;
+    }
+
+    /* Fracture title — clamp value was overflowing on narrow viewports */
+    .fracture-word {
+      font-size: clamp(48px, 16vw, 120px);
+      letter-spacing: -0.02em;
+      padding: 0 10px;
+    }
   }
 
   @media (max-width: 480px) {
