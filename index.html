@@ -1135,9 +1135,10 @@
 
     /* Fracture title — clamp value was overflowing on narrow viewports */
     .fracture-word {
-      font-size: clamp(48px, 16vw, 120px);
+      font-size: clamp(32px, 10vw, 80px);
       letter-spacing: -0.02em;
-      padding: 0 10px;
+      padding: 0 20px;
+      word-break: break-word;
     }
   }
 
@@ -1157,6 +1158,11 @@
     .credits-list { gap: 20px; }
     .credit-row dt { padding-top: 6px; font-size: 10px; }
     .credit-row dd { font-size: 20px; }
+    .fracture-word {
+      font-size: clamp(28px, 9vw, 56px);
+      letter-spacing: -0.01em;
+      padding: 0 16px;
+    }
   }
 </style>
 </head>
