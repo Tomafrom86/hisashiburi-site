@@ -832,6 +832,52 @@
     pointer-events: none;
   }
 
+  /* ---------- TRAILER ---------- */
+  .trailer-section {
+    padding: 120px 48px;
+    display: block;
+    min-height: auto;
+    background: var(--void);
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .trailer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 1100px;
+    margin: 0 auto 36px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .trailer-header .t-label { color: var(--magenta); }
+  .trailer-header .t-jp { color: var(--bone); opacity: 0.6; }
+  .trailer-wrap {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #000;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .trailer-wrap video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .trailer-caption {
+    max-width: 1100px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--bone);
+    opacity: 0.55;
+  }
+
   /* Placeholder state — hidden by default; shown only when image fails to load */
   .still-placeholder {
     width: 100%;
@@ -1123,6 +1169,11 @@
 
     /* Reunion section */
     .reunion { padding: 100px 20px; }
+
+    /* Trailer section */
+    .trailer-section { padding: 80px 20px; }
+    .trailer-header { font-size: 9px; letter-spacing: 0.2em; margin-bottom: 24px; }
+    .trailer-caption { font-size: 8px; letter-spacing: 0.2em; }
     .reunion-meaning { margin-top: 60px; font-size: 11px; }
     .reunion-word {
       font-size: clamp(32px, 9vw, 60px) !important;
@@ -1230,6 +1281,23 @@
       <span class="label">● &nbsp; Frame 01</span>
       <span class="timecode">TOKYO &nbsp;·&nbsp; 07:42 JST</span>
     </div>
+  </div>
+</section>
+
+<section class="trailer-section">
+  <div class="trailer-header">
+    <span class="t-label">▶ &nbsp; Official Trailer</span>
+    <span class="t-jp">予告編</span>
+  </div>
+  <div class="trailer-wrap">
+    <video controls preload="metadata" poster="trailer-poster.jpg" playsinline>
+      <source src="HISASHIBURI_TRAILER_web.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="trailer-caption">
+    <span>HISASHIBURI / 2026</span>
+    <span>RT 00:00:55</span>
   </div>
 </section>
 
